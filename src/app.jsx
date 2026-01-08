@@ -7,7 +7,7 @@ export function App() {
 
   // run once after mount
   useEffect(() => {
-    const controls = animate(boxRef.current, { rotate: 360 }, { duration: 1.2 });
+    const controls = animate(boxRef.current, { rotate: 30 }, { duration: 1.2 });
     return () => controls.stop(); // clean up on unmount/HMR
   }, []);
 
@@ -17,7 +17,7 @@ export function App() {
 
   return (
     <>
-      <div ref={boxRef} class="box">⚙️</div>
+      <div ref={boxRef} class="box"></div>
       <button onClick={bump}>Animate</button>
 
       <p>
@@ -30,6 +30,17 @@ export function App() {
       <p>Let’s dive into the ancient Greek world full of drama and hidden motifs…</p>
     </>
   );
+
+
+
+
+
+
+
+
+
+
+  
 }
 
 function IthacaWeather() {

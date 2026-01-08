@@ -23,3 +23,10 @@
 .read-the-docs {
   color: #888;
 }
+
+.box {
+  width: 96px; height: 96px;
+  display: grid; place-items: center;
+  border: 1px solid #555; border-radius: 12px;
+  margin: 16px 0;
+}
