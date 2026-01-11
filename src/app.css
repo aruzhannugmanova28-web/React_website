@@ -1,32 +1,67 @@
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.hero{
+  display:grid;
+  place-items: center;
+  gap: 1.25rem;
+  padding: 2rem 1 rem 3rem;
+}
+
+.title{
   text-align: center;
+  line-height: 1.15;
+  margin: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.preact:hover {
-  filter: drop-shadow(0 0 2em #673ab8aa);
+.orbit {
+  position: relative;
+  width:320 px;
+  height: 480 px;
 }
 
-.card {
-  padding: 2em;
+.book{
+  position: relative; 
+  z-index: 2;
+  width: 100%; 
+  height: auto; 
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  will-change: transform;
+  cursor: pointer;
 }
 
-.read-the-docs {
-  color: #888;
+.blob{
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(40px);
+  opacity: .55;
+  z-index 1;
+  transform-origin: center;
+  animation: orbit 10s linear infinite;
+  --r: 170px;
 }
 
-.box {
-  width: 96px; height: 96px;
-  display: grid; place-items: center;
-  border: 1px solid #555; border-radius: 12px;
-  margin: 16px 0;
+.blob-blue{
+  background: radial-gradient(circle, rgba(70, 110, 170, 0.45), rgba(70, 110, 170, 0) 60%);
+  animation-duration:12s;
+}
+
+.blob-gold{
+  background: radial-gradient(circle, rgba(210, 160, 85, 0.45), rgba(210, 160, 85, 0) 60%);
+  animation-duration:9s;
+  animation-direction: reverse;
+}
+
+@keyframes orbit{
+  from {transform: translate(-50%, -50%) rotate(0deg) translateX(var(--r)) rotate(0deg);}
+  to {transform: translate(-50%, -50%) rotate(360deg) translateX(var(--r)) rotate(-360deg);}
+}
+.cta{
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0.25rem 0 0;
+  text-align: center;
 }
