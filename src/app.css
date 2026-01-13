@@ -1,8 +1,8 @@
 .hero{
-  display:grid;
+  display: grid;
   place-items: center;
   gap: 1.25rem;
-  padding: 2rem 1 rem 3rem;
+  padding: 2rem 1rem 3rem;
 }
 
 .title{

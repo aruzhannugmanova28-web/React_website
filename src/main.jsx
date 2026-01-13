@@ -1,5 +1,6 @@
-import { render } from 'preact'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 import './index.css'
 import App from './app.jsx';        
 
-render(<App />, document.getElementById('app'));
+createRoot(document.getElementById('app')).render(<App />);
