@@ -1,8 +1,9 @@
 .hero{
   display: grid;
-  place-items: center;
+  justify-items: center;
   gap: 1.25rem;
   padding: 2rem 1rem 3rem;
+
 }
 
 .title{
@@ -13,14 +14,17 @@
 
 .orbit {
   position: relative;
-  width:320 px;
-  height: 480 px;
+  width: 650px;
+  overflow: visible;
+  display: grid; 
+  place-items: center;
+  margin: 2rem auto 0;
 }
 
 .book{
-  position: relative; 
+  position: relative;
   z-index: 2;
-  width: 100%; 
+  width: 40%; 
   height: auto; 
   border-radius: 6px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
@@ -32,23 +36,23 @@
   position: absolute;
   top: 50%; 
   left: 50%;
-  width: 280px;
-  height: 280px;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
-  pointer-events: none;
-  filter: blur(40px);
+  filter: blur(0.009px);
   opacity: .55;
+  z-index: 1;
   transform-origin: center;
   animation: orbit 10s linear infinite;
-  --r: 170px;
+  --r: 220px;
 }
 
-.blob-blue{
+.blob--blue{
   background: radial-gradient(circle, rgba(70, 110, 170, 0.45), rgba(70, 110, 170, 0) 60%);
   animation-duration:12s;
 }
 
-.blob-gold{
+.blob--gold{
   background: radial-gradient(circle, rgba(210, 160, 85, 0.45), rgba(210, 160, 85, 0) 60%);
   animation-duration:9s;
   animation-direction: reverse;
