@@ -1,10 +1,10 @@
-import { useEffect, useRef } from 'preact/hooks';
+import React, { useRef } from 'react';
 import { animate } from 'motion';
-import '../app.css';
+import '../app.css';     
 import bookCover from '../assets/The_Odyssey.png'
 
 export default function Home() {
-  const boxRef = useRef(null);
+  const bookRef = useRef(null);
 
   const tilt = () =>
     animate(bookRef.current, {rotate: [-4, 4, 0] }, { duration: 0.5, easing: 'ease-in-out'});
@@ -23,13 +23,7 @@ export default function Home() {
       </h1>
 
       <div className="orbit">
-         <img
-          ref={bookRef}
-          src={bookCover}
-          className="book"
-          alt="The Odyssey"
-          onClick={tilt}
-        />
+         <img ref={bookRef} src={bookCover} className="book" alt="The Odyssey" onClick={tilt}/>
         <span className="blob blob--blue" />
         <span className="blob blob--gold" />
       </div>

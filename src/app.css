@@ -38,7 +38,6 @@
   pointer-events: none;
   filter: blur(40px);
   opacity: .55;
-  z-index 1;
   transform-origin: center;
   animation: orbit 10s linear infinite;
   --r: 170px;
