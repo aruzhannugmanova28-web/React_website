@@ -12,7 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* i didnt really get why do we need this file but yes, i dont think i modified it at all*/ 
 a {
   font-weight: 500;
   color: #646cff;
